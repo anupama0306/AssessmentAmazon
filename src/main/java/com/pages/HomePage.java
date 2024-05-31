@@ -1,6 +1,5 @@
 package com.pages;
 
-import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import com.util.ElementUtil;
@@ -25,14 +24,14 @@ public class HomePage  {
 
     }
 
-    @Step("Verifying accessibility for home logo link ")
+
     public Boolean checkHomeLogoExist() throws InterruptedException {
 
         return(elementUtil.waitForVisibilityOfElement(homeLogo, AppConstants.POLLING_DEFAULT_WAIT).isDisplayed());
 
 
     }
-    @Step("Verifying accessibility for other main links ")
+
     public Boolean checkOtherLinksExist(String[] otherLinks) throws InterruptedException {
         Boolean bFlag=true;
         List <String> links= elementUtil.getElementsTextList(otherLinksMain);
@@ -46,7 +45,7 @@ public class HomePage  {
 
     }
 
-    @Step("Click on all main links ")
+
     public void clickLinks(String[] otherLinks) throws InterruptedException {
         elementUtil.clickElementWhenReady(homeLogo, AppConstants.POLLING_DEFAULT_WAIT);
 
